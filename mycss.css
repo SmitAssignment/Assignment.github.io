@@ -1,0 +1,67 @@
+body{
+     background-color: rgba(237, 124, 203, 0.416);
+}
+.parent{
+    /* background-size: 750px 700px ; */
+    position:relative;
+}
+table, th, td {
+    border: 1px solid rgb(33, 12, 165);
+    position: center center;
+    margin: 0px;
+    padding: 0px;
+}
+th, td {
+    padding: 10px;
+}
+
+.child{
+    width:0px;
+    height:0px;
+    display:block;
+    position:relative;
+}
+.parent::after{
+    content:"";
+    background-image: url(w1.jpg) ;
+
+    /* -webkit-background-size: cover; */
+    /* -moz-background-size: cover; */
+    /* -moz-background-size: cover; */
+    background-size: cover;
+    
+    background-repeat: no-repeat; 
+    background-size: 900px 900px ;  
+    background-position: center center; 
+    /* padding-top: 20px; */
+    
+    opacity:0.5;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position:absolute;
+    z-index:-1;
+}
+
+.my{
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+}
+@keyframes example{
+    0%{background-color: red; left: 0px; top: 0px;}
+    25%{background-color: yellow; left: 1125px; top: 0px;}
+    50%{background-color: blue; left: 1125px; top: 112px;}
+    75%{background-color: aqua; left: 0px; top: 112px;}
+    100%{background-color: red; left: 0px; top: 0px;}
+}
+.my1{
+    margin-top: 25px;
+    font-size: 200%;
+}
